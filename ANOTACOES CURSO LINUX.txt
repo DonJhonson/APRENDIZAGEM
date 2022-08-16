@@ -23,7 +23,8 @@ whereis "nomedocomando" = Mostra onde esta o comando especifico.
 
 -------------------------------
 
-Variavel;
+Variavel; variavel =  um nome que armazena um valor
+
 para mostrar a variavel, usar comando echo, comando para mostrar o que esta a frente dele
 para executar uma variavel a partir do comando echo, usar comando
 echo $nomedavariavel
@@ -37,5 +38,3 @@ Para incluir a variavel dentro de um comando, utilizar <VARIAVEL>.
 
 
 para executar comandos sequenciais, você deve colocar ponto e virgula (;).
-
-variavel =  um nome que armazena um valor
