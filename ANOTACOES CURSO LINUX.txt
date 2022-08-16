@@ -1,0 +1,41 @@
+COMANDOS UTEIS
+sudo su - = root (senha de usuario normal)
+su - = root
+ls -l = Listar diretorios atuais
+date = data e hora
+echo $$ = Checar PID
+bash = Novo Bash
+exit = Sair de bash atual
+export "nomedavariavel" = comando para exportar variavel entre os bash
+export VAR1=nomedavariavel = Exportar variavel entre os Bash
+comando env |less = so mostra as variaveis exportadas
+comando set |less = so mostra o que nao esta exportado (do ambiente atual)
+comando --help = exibit ajuda sobre o comando especifico.
+man "nomedocomando" = exibe o manual do comando
+cd "nomedodiretorio" = comando para mudar de diretorio
+type "nomedocomando" = para saber onde esse comando faz parte
+whatis "nomedocomando" = descricao simples sobre o que o comando faz
+whereis "nomedocomando" = Mostra onde esta o comando especifico.
+
+
+
+
+
+-------------------------------
+
+Variavel;
+para mostrar a variavel, usar comando echo, comando para mostrar o que esta a frente dele
+para executar uma variavel a partir do comando echo, usar comando
+echo $nomedavariavel
+
+Para referendar um nome colocar "nomedavariavel"
+
+para ver lista de variaveis do sistema pré declaradas, usar comando env ou set, para tabelar as informacoes usar |less (pipeless)
+para armazenar um comando dentro uma variavel, colocar nomedavariavel='nomedocomando' (entre crase)
+
+Para incluir a variavel dentro de um comando, utilizar <VARIAVEL>.
+
+
+para executar comandos sequenciais, você deve colocar ponto e virgula (;).
+
+variavel =  um nome que armazena um valor
