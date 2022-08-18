@@ -1,7 +1,8 @@
 COMANDOS UTEIS
 sudo su - = root (senha de usuario normal)
 su - = root
-ls -l = Listar diretorios atuais
+ls -l = Listar diretorios ou arquivos atuais, com informacoes
+ls -lh = mostra o arquivo ou diretorio em tamanho total.
 date = data e hora
 echo $$ = Checar PID
 bash = Novo Bash
@@ -12,10 +13,80 @@ comando env |less = so mostra as variaveis exportadas
 comando set |less = so mostra o que nao esta exportado (do ambiente atual)
 comando --help = exibit ajuda sobre o comando especifico.
 man "nomedocomando" = exibe o manual do comando
-cd "nomedodiretorio" = comando para mudar de diretorio
+cd / "nomedodiretorio" = comando para mudar de diretorio (caminho absoluto exemplo: cd /home/aluno1, caminho relativo: cd /home, cd aluno1)
 type "nomedocomando" = para saber onde esse comando faz parte
 whatis "nomedocomando" = descricao simples sobre o que o comando faz
 whereis "nomedocomando" = Mostra onde esta o comando especifico.
+pwd = Mostra o diretorio em que voce se encontra
+cd .. = voltar um nivel no diretorio em que voce esta, para voltar 2 niveis ou mais: cd ../..
+cd - = Volta ao ultimo diretorio em que voce estava
+cd = volta para o diretorio do usuario atual.
+mkdir = comando para criar diretorios
+mkdir -p diretorio/diretorio/ = Cria diretorios dentro de outro diretorio, sem precisar estar presente no primeiro diretorio.
+rmdir = comando para remover diretorio (sò remove diretòrios vazios)
+touch = cria arquivos dentro dos diretorios,
+rm = para apagar arquivos dentro dos diretorios. rm -r para remover todos o diretorio e arquivos dentro dele
+cp = comando para copiar arquivos, cp Arquivo de origem/Arquivo destino, voce tambem pode copiar o arquivo do diretorio de origem para outro, fazendo, cp arquivo de origem /diretorio destino
+cp -r = copiar diretorio.
+mv = comando para mover diretorios ou arquivos.
+ls -a = mostrar arquivos ocultos (sempre comecam com .)
+
+--------------
+Arquivando e compactando arquivos
+
+comandos:
+
+tar cf = criar um arquivo de backup
+tar xf = para extracao do arquivo compactado
+tar tf = listar o conteudo
+
+tar cf = F è para indicar o nome do arquivo
+
+para compactar um arquivo
+è usado o comando 
+gzip nomedoarquivo = 
+gzip -k nomedoarquivo = compacta porem mantem o arquivo compactado
+gzip -d ou gunzip nomedoarquivo = descompactar o arquivo
+
+para compactar e agrupar ao mesmo tempo, usar comando:
+tar czvf arquivo.tgz
+para descompactar usar
+tar xzvf arquivo.tgz
+
+para compactar e agrupar tudo
+comando:
+tar czvpf nomedoarquivo * 
+
+--------------
+Procurar aquivos no linux
+
+o principal comando è:
+find /diretorio -name nomedoarquivo = pesquisa no diretorio em que voce selecionar na procura
+find ./ -name nomedoarquivo = ele pesquisa no diretorio atual
+locate nomedoarquivo = localiza o arquivo em um diretorio do sistema, buscando tudo o que contem o nome do arquivo ou prefixos
+whereis nomedoexecutavel = busca por executaveis, manual e etc.
+
+--------------
+Criando links
+
+Voce pode criar links de arquivos usando o comando 
+ln -s nomedoarquivo nomedolink
+voce tambem pode criar links para diretorios dentro de um outro diretorio.
+exemplo:
+ls -s nomedoarquivo /tmp/ atalho-tmp = com isso voce cria um link para aquele diretorio
+podendo entao copiar arquivos usando cp nomedoarquivo nomedolink.
+
+Como criar um Hardlink
+ln nomedoarquivo nomedolinkfisico
+
+--------------
+
+File Globbing
+ls -l * = Lista todos os prefixos que com o nome que vocë quer.
+ls -l [?-?] = Listar os caracteres que voce deseja que aparecam
+ls -l {?-?} = pega o nome do arquivo que voce quer que seja listado
+ls -l nome1? = Busca pelo primeiro nome e depois o caractere que tiver, independente de qual seja.
+
 
 
 
@@ -23,8 +94,7 @@ whereis "nomedocomando" = Mostra onde esta o comando especifico.
 
 -------------------------------
 
-Variavel; variavel =  um nome que armazena um valor
-
+Variavel;
 para mostrar a variavel, usar comando echo, comando para mostrar o que esta a frente dele
 para executar uma variavel a partir do comando echo, usar comando
 echo $nomedavariavel
@@ -38,3 +108,16 @@ Para incluir a variavel dentro de um comando, utilizar <VARIAVEL>.
 
 
 para executar comandos sequenciais, você deve colocar ponto e virgula (;).
+
+variavel =  um nome que armazena um valor
+
+-------------------------------------
+
+o diretorio raiz do linux è representado pela /
+
+diretorio bin e sbin e onde estao os programas
+no diretorio boot è onde fica o kernel
+o diretorio etc ficam os arquivos de configuracao linux
+opt è onde ficam os softwares de terceiros
+diretorio usr è onde ficam os arquivos de instalacao
+diretorio home è onde ficam cada usuario do sistema
