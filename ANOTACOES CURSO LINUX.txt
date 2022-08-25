@@ -65,6 +65,30 @@ find /diretorio -name nomedoarquivo = pesquisa no diretorio em que voce selecion
 find ./ -name nomedoarquivo = ele pesquisa no diretorio atual
 locate nomedoarquivo = localiza o arquivo em um diretorio do sistema, buscando tudo o que contem o nome do arquivo ou prefixos
 whereis nomedoexecutavel = busca por executaveis, manual e etc.
+--------------
+Para ler arquivos de texto no linux
+Usar comando
+cat nomedoarquivo = ler arquivo de texto
+less nomedoarquivo = ler o arquivo com texto, linha a linha, com navegacao, espaco para pular uma pagina, g minusculo vai para o comeco do arquvio, G maiusculo vai para a ultima linha
+
+Para criar uma nova saida do arquivo de texto
+cat nomedoarquivo > novoarquivo
+
+Comando para tratamento de arquivos de texto
+wc nomedoarquivo = comando para contar palavras ( LINHAS PALAVRAS CARACTERES )
+wc *prefixo = para contar palavras, linhas e caracteres de todos os arquivos.
+sort nomedoarquivo = comando para organizar em ordem alfabetica
+sort -r nomedoarquivo = ordena de forma alfabetica, inversa.
+sort -u nomedoarquivo = Remove as palavras repetidas.
+sort nomedoarquivo > novonomedearquivo = para salvar um arquivo ordenado alfabeticamente
+uniq nomedoarquivo = so funciona com arquivos ordenados, ele mostra os valores unicos, descartando os duplicados 
+uniq -u nomedoarquivo = mostrar as ocorrencias unicas, descartando as repetidas
+uniq -d nomedoarquivo = mostrar as ocorrencias, apenas repetidas.
+cut -c?-?(numerodecaracteres) nomedoarquivo
+cut -f?(numerodocampo) -d"" nomedoarquivo
+
+
+Como usar pipe
 
 --------------
 Criando links
